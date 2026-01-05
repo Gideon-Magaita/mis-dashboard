@@ -99,7 +99,7 @@ function Dwss() {
 
                     <div className="col col-stats ms-3">
                       <div className="numbers">
-                        <p className="card-category">MAJI MJINI</p>
+                        <p className="card-category">WSSAs</p>
                         <h4 className="card-title">TZS 1,000,000</h4>
                       </div>
                     </div>
