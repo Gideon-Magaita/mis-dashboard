@@ -83,19 +83,19 @@ function Dwr() {
       <div className="page-inner">
 
         {/* Page Title */}
-        <div className="mb-4">
-          <h3 className="fw-bold">DWR – Basin Financial Overview</h3>
+        <div className="mb-4 d-flex justify-content-between align-items-center">
+          <h3 className="fw-bold">
+          DWR – Basin Financial Overview
           <p className="text-muted">
             Distribution of allocated amounts across river & lake basins
           </p>
-        </div>
-
-        {/* Go Back */}
-        <div className="d-flex justify-content-end mb-4">
-          <Link to="/mow" className="btn btn-sm btn-secondary btn-round">
+          </h3>
+           <Link to="/mow" className="btn btn-sm btn-secondary btn-round">
             ← Go Back
           </Link>
         </div>
+
+    
 
         {/* Cards */}
         <div className="row">

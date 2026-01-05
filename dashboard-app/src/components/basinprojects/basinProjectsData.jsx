@@ -32,7 +32,7 @@ export const basinProjectsData = {
       id: 2,
       name: "Hydrological Data Collection",
       amount: 450000000,
-      status: "Planned",
+      status: "Ongoing",
     },
   ],
   ruvuma: [
@@ -58,7 +58,7 @@ export const basinProjectsData = {
       id: 1,
       name: "Internal Drainage Mapping",
       amount: 360000000,
-      status: "Planned",
+      status: "Ongoing",
     },
   ],
 

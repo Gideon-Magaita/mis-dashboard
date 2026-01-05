@@ -1,7 +1,12 @@
 import {Link} from 'react-router-dom'
 
 
+
+
 export default function Footer() {
+
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="footer">
       <div className="container-fluid d-flex justify-content-between">
@@ -12,8 +17,8 @@ export default function Footer() {
 
         {/* Center copyright */}
         <div className="copyright">
-          2026, Made with{" "}
-          <i className="fa fa-heart heart text-danger"></i> by{" "}
+          {currentYear}, Made 
+           by{" "}
           <Link to="/">Developers - MoW</Link>
         </div>
 

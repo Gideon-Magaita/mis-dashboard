@@ -6,12 +6,12 @@ function Home() {
   const chartRef = useRef(null);
   const chartInstance = useRef(null);
 
-  // Demo data with TZS amounts (millions)
+  // Demo data
   const cardData = [
     { category: "Total Claims", amount: 1_294_000_000, icon: "fas fa-file-alt", color: "primary", link: "/claims" },
     { category: "Total IPCS", amount: 1_303_000_000, icon: "fas fa-users", color: "info", link: "/ipcs" },
     { category: "Projects", amount: 1_345_000_000, icon: "fas fa-project-diagram", color: "success", link: "/projects" },
-    { category: "Consultant IPCS", amount: 576_000_000, icon: "fas fa-user-tie", color: "danger", link: "/consultants" },
+    { category: "Certificates", amount: 576_000_000, icon: "fas fa-user-tie", color: "danger", link: "/certificates" },
   ];
 
   useEffect(() => {

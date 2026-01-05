@@ -57,7 +57,7 @@ function Region() {
       <div className="page-inner">
 
         {/* Authority Header */}
-        <div className="mb-4">
+        <div className="d-flex justify-content-between align-items-center mb-4">
           <h3 className="fw-bold">{authority.authorityName}</h3>
           <Link to="/maji" className="btn btn-sm btn-secondary btn-round mt-2">
             ← Back to Regions

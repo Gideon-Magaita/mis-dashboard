@@ -6,7 +6,7 @@ function Maji() {
   const chartRef = useRef(null);
   const chartInstance = useRef(null);
 
-  // Tanzania Regions Data (sample amounts) with URL-friendly keys
+  // Tanzania Regions Data
   const regions = [
     { key: "arusha", name: "Arusha", amount: 1200000 },
     { key: "dar", name: "Dar es Salaam", amount: 3200000 },
@@ -93,15 +93,8 @@ function Maji() {
       <div className="page-inner">
 
         {/* Page Title */}
-        <div className="mb-4">
-        <h3 className="fw-bold">Regional Water Amount Distribution</h3>
-        <p className="text-muted">
-            Overview of allocated / claimed amounts per region
-        </p>
-        </div>
-
-        {/* Go Back Button*/}
-        <div className="d-flex justify-content-end mb-4">
+        <div className="d-flex justify-content-between align-items-center mb-4">
+        <h3 className="fw-bold">Overview of allocated / claimed amounts per region</h3>
         <Link to="/dwss" className="btn btn-sm btn-secondary btn-round mt-2">
             ← Go Back
         </Link>

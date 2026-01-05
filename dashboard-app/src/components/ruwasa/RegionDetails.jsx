@@ -55,18 +55,20 @@ function RegionDetails() {
   return (
     <div className="container-fluid">
       <div className="page-inner">
-        <div className="mb-4">
-          <h3 className="fw-bold">{region.name} – District Financial Breakdown</h3>
-          <p className="text-muted">
+        
+        <div className="mb-4 d-flex justify-content-between align-items-center">
+          <h3 className="fw-bold">
+            {region.name} – District Financial Breakdown
+            <p className="text-muted">
             Total Amount: <strong>TZS {totalAmount.toLocaleString()}</strong>
           </p>
-        </div>
-
-        <div className="mb-3">
+          </h3>
+          
           <Link to="/ruwasa" className="btn btn-sm btn-secondary btn-round">
             ← Back to Regions
           </Link>
         </div>
+
 
         <div className="row">
           {region.districts.map((district) => (

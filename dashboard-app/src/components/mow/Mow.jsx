@@ -6,6 +6,11 @@ function Mow() {
   const chartRef = useRef(null);
   const chartInstance = useRef(null);
 
+  const darhm = 1_300_000
+  const dwss = 1_200_000
+  const dwr = 1_100_000
+  const dwq = 1_000_000
+
   useEffect(() => {
     const ctx = chartRef.current.getContext("2d");
 
@@ -25,7 +30,7 @@ function Mow() {
         datasets: [
           {
             label: "Amount (TZS)",
-            data: [1294, 1303, 1345, 576],
+            data: [1_300_000,1_200_000,1_100_000,1_000_000],
             backgroundColor: [
               "#39495fff",
               "#4eaef8ff",
@@ -82,7 +87,7 @@ function Mow() {
                     <div className="col col-stats ms-3">
                       <div className="numbers">
                         <p className="card-category">DARHM</p>
-                        <h4 className="card-title">1,294</h4>
+                        <h4 className="card-title">{darhm.toLocaleString()}M</h4>
                       </div>
                     </div>
                   </div>
@@ -105,7 +110,7 @@ function Mow() {
                   <div className="col col-stats ms-3">
                     <div className="numbers">
                       <p className="card-category">DWSS</p>
-                      <h4 className="card-title">1,303</h4>
+                      <h4 className="card-title">{dwss.toLocaleString()}M</h4>
                     </div>
                   </div>
                 </div>
@@ -128,7 +133,7 @@ function Mow() {
                   <div className="col col-stats ms-3">
                     <div className="numbers">
                       <p className="card-category">DWQ</p>
-                      <h4 className="card-title">1,345</h4>
+                      <h4 className="card-title">{dwq.toLocaleString()}M</h4>
                     </div>
                   </div>
                 </div>
@@ -151,7 +156,7 @@ function Mow() {
                   <div className="col col-stats ms-3">
                     <div className="numbers">
                       <p className="card-category">DWR</p>
-                      <h4 className="card-title">576</h4>
+                      <h4 className="card-title">{dwr.toLocaleString()}M</h4>
                     </div>
                   </div>
                 </div>

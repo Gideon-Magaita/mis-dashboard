@@ -14,5 +14,4 @@ export const projectsData = {
     { id: 1, name: "Dodoma Reservoir Construction", amount: 800000, status: "Completed" },
     { id: 2, name: "Dodoma Sanitation Improvement", amount: 1300000, status: "Ongoing" },
   ],
-  // ...continue for all regions
 };

@@ -6,7 +6,7 @@ function Dwq() {
   const chartRef = useRef(null);
   const chartInstance = useRef(null);
 
-  // 🔹 Labs Dataset
+  //Labs Dataset
   const labs = [
     { key: "mwanza", name: "Mwanza Lab", amount: 1200000 },
     { key: "shinyanga", name: "Shinyanga Lab", amount: 950000 },
@@ -79,21 +79,20 @@ function Dwq() {
       <div className="page-inner">
 
         {/* Page Title */}
-        <div className="mb-4">
-          <h3 className="fw-bold">DWQ – Laboratory Financial Overview</h3>
+        <div className="mb-4 d-flex justify-content-between align-items-center">
+          <h3 className="fw-bold">
+            DWQ – Laboratory Financial Overview
           <p className="text-muted">
             Distribution of amounts across DWQ laboratories
           </p>
-        </div>
-
-        {/* Go Back Button*/}
-        <div className="d-flex justify-content-end mb-4">
-        <Link to="/mow" className="btn btn-sm btn-secondary btn-round mt-2">
+          </h3>
+          <Link to="/mow" className="btn btn-sm btn-secondary btn-round mt-2">
             ← Go Back
         </Link>
         </div>
 
-        {/* Stat Cards */}
+
+        {/* Start Cards */}
         <div className="row">
 
           {/* DWQ - MoW */}
@@ -128,7 +127,7 @@ function Dwq() {
           {labs.map((lab) => (
             <div className="col-md-4 mb-3" key={lab.key}>
               <Link
-                to={`/dwq/labs/${lab.key}`}
+                to={`/labs/${lab.key}`}
                 className="text-decoration-none"
               >
                 <div className="card card-stats card-round">

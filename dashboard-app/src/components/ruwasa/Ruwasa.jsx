@@ -86,18 +86,14 @@ function Ruwasa() {
       <div className="page-inner">
 
         {/* Page Title */}
-        <div className="mb-4">
+        <div className="mb-4 d-flex justify-content-between align-items-center">
           <h3 className="fw-bold">RUWASA – Regional Financial Distribution</h3>
-          <p className="text-muted">
-            Overview of allocated and claimed amounts across RUWASA regions
-          </p>
-        </div>
-
-        {/* Go Back */}
-        <div className="d-flex justify-content-end mb-4">
+          
+          <div className="mb-4">
           <Link to="/claims" className="btn btn-sm btn-secondary btn-round">
             ← Go Back
           </Link>
+        </div>
         </div>
 
         {/* Region Cards */}
