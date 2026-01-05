@@ -118,7 +118,7 @@ function Region() {
 
         {/* Chart */}
         <div className="row mt-4">
-          <div className="col-md-6">
+          <div className="col-md-12">
             <div className="card card-round">
               <div className="card-header">
                 <div className="card-title">Financial Overview</div>
