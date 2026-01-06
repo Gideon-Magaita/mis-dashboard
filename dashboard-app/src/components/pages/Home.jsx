@@ -32,7 +32,7 @@ function Home() {
                 case "primary": return "#177dff";
                 case "info": return "#36a3f7";
                 case "success": return "#2bb930";
-                case "secondary": return "#f3545d";
+                case "danger": return "#f3545d";
                 default: return "#177dff";
               }
             }),

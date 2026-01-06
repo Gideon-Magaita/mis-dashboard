@@ -19,14 +19,14 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Layout/>}>
-          <Route index element={<Home />}/>
-          <Route path="claims" element={<Claims/>}/>
-          <Route path="mow" element={<Mow/>}/>
-          <Route path="dwss" element={<Dwss/>}/>
-          <Route path="dwq" element={<Dwq/>}/>
-          <Route path="dwr" element={<Dwr/>}/>
-          <Route path="maji" element={<Maji/>}/>
-          <Route path="ruwasa" element={<Ruwasa/>}/>
+         <Route index element={<Home />}/>
+         <Route path="claims" element={<Claims/>}/>
+         <Route path="mow" element={<Mow/>}/>
+         <Route path="dwss" element={<Dwss/>}/>
+         <Route path="dwq" element={<Dwq/>}/>
+         <Route path="dwr" element={<Dwr/>}/>
+         <Route path="maji" element={<Maji/>}/>
+         <Route path="ruwasa" element={<Ruwasa/>}/>
          <Route path="regions/:regionKey" element={<Region/>}/>
          <Route path="projects/:regionKey" element={<Projects/>}/>
          <Route path="basinprojects/:basinKey" element={<BasinProjects/>}/>
