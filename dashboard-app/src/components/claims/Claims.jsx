@@ -21,7 +21,7 @@ function Claims() {
           {
             label: "Amount (TZS)",
             data: [5000000, 1000000],
-            backgroundColor: ["#177dff", "#10bb85ff"],
+            backgroundColor: ["#177dff", "#2ec2f8ff"],
             borderRadius: 8,
           },
         ],
