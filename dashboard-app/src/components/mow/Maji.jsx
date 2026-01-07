@@ -25,8 +25,6 @@ function Maji() {
     { key: "mtwara", name: "Mtwara", amount: 700000 },
     { key: "mwanza", name: "Mwanza", amount: 2000000 },
     { key: "njombe", name: "Njombe", amount: 540000 },
-    { key: "pemba-north", name: "Pemba North", amount: 300000 },
-    { key: "pemba-south", name: "Pemba South", amount: 280000 },
     { key: "pwani", name: "Pwani", amount: 1250000 },
     { key: "rukwa", name: "Rukwa", amount: 610000 },
     { key: "ruvuma", name: "Ruvuma", amount: 770000 },
@@ -36,10 +34,6 @@ function Maji() {
     { key: "songwe", name: "Songwe", amount: 590000 },
     { key: "tabora", name: "Tabora", amount: 1040000 },
     { key: "tanga", name: "Tanga", amount: 1500000 },
-    { key: "zanzibar-central", name: "Zanzibar Central", amount: 350000 },
-    { key: "zanzibar-north", name: "Zanzibar North", amount: 420000 },
-    { key: "zanzibar-south", name: "Zanzibar South", amount: 390000 },
-    { key: "zanzibar-west", name: "Zanzibar West", amount: 500000 },
   ];
 
   // Chart
@@ -94,7 +88,7 @@ function Maji() {
 
         {/* Page Title */}
         <div className="d-flex justify-content-between align-items-center mb-4">
-        <h3 className="fw-bold">Overview of allocated / claimed amounts per region</h3>
+        <h3 className="fw-bold">Claimed amounts per region</h3>
         <Link to="/dwss" className="btn btn-sm btn-secondary btn-round mt-2">
             ← Go Back
         </Link>

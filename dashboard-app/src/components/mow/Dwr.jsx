@@ -85,10 +85,7 @@ function Dwr() {
         {/* Page Title */}
         <div className="mb-4 d-flex justify-content-between align-items-center">
           <h3 className="fw-bold">
-          DWR – Basin Financial Overview
-          <p className="text-muted">
-            Distribution of allocated amounts across river & lake basins
-          </p>
+          DWR – Claimed amounts per Basin
           </h3>
            <Link to="/mow" className="btn btn-sm btn-secondary btn-round">
             ← Go Back

@@ -16,4 +16,8 @@ export const districtProjectsData = {
   ngorongoro: [
     { id: 1, name: "Reservoir Upgrade", amount: 300000, status: "Ongoing" },
   ],
+  bahi: [
+    { id: 1, name: "Bahi Water Supply Expansion", amount: 290000, status: "Ongoing" },
+    { id: 2, name: "Bahi Irrigation Scheme", amount: 13400000, status: "Completed" },
+  ],
 };

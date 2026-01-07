@@ -87,7 +87,7 @@ function Ruwasa() {
 
         {/* Page Title */}
         <div className="mb-4 d-flex justify-content-between align-items-center">
-          <h3 className="fw-bold">RUWASA – Regional Financial Distribution</h3>
+          <h3 className="fw-bold">RUWASA – Claimed amounts per region</h3>
           
           <div className="mb-4">
           <Link to="/claims" className="btn btn-sm btn-secondary btn-round">

@@ -22,7 +22,7 @@ function Region() {
     chartInstance.current = new Chart(ctx, {
       type: "bar",
       data: {
-        labels: ["Claims Amount", "Total Amount"],
+        labels: ["Claimed Amount", "Paid Amount"],
         datasets: [
           {
             data: [authority.claimAmount, authority.totalAmount],
@@ -93,7 +93,7 @@ function Region() {
                   <i className="fas fa-hand-holding-usd"></i>
                 </div>
                 <div>
-                  <p className="card-category">Claim Amount</p>
+                  <p className="card-category">Claimed Amount</p>
                   <h4>TZS {authority.claimAmount.toLocaleString()}</h4>
                 </div>
               </div>
@@ -107,7 +107,7 @@ function Region() {
                   <i className="fas fa-coins"></i>
                 </div>
                 <div>
-                  <p className="card-category">Total Amount</p>
+                  <p className="card-category">Paid Amount</p>
                   <h4>TZS {authority.totalAmount.toLocaleString()}</h4>
                 </div>
               </div>

@@ -81,10 +81,7 @@ function Dwq() {
         {/* Page Title */}
         <div className="mb-4 d-flex justify-content-between align-items-center">
           <h3 className="fw-bold">
-            DWQ – Laboratory Financial Overview
-          <p className="text-muted">
-            Distribution of amounts across DWQ laboratories
-          </p>
+            DWQ – Claimed amounts per Lab
           </h3>
           <Link to="/mow" className="btn btn-sm btn-secondary btn-round mt-2">
             ← Go Back

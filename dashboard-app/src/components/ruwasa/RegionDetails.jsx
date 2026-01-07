@@ -58,7 +58,7 @@ function RegionDetails() {
         
         <div className="mb-4 d-flex justify-content-between align-items-center">
           <h3 className="fw-bold">
-            {region.name} – District Financial Breakdown
+            {region.name} – Claimed amounts per District
             <p className="text-muted">
             Total Amount: <strong>TZS {totalAmount.toLocaleString()}</strong>
           </p>
