@@ -83,7 +83,7 @@ function Home() {
         {/* Cards */}
         <div className="row">
           {cardData.map((d, i) => (
-            <div className="col-sm-6 col-md-3" key={i}>
+            <div className="col-sm-6 col-md-4" key={i}>
               <Link to={d.link} className="text-decoration-none">
                 <div className="card card-stats card-round">
                   <div className="card-body">
