@@ -2,11 +2,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Home from "./components/pages/Home"
 import Layout from "./components/pages/Layout"
 import Claims from "./components/claims/Claims"
-import Mow from './components/mow/Mow'
+import Labs from './components/mow/Labs'
 import Dwss from './components/mow/Dwss'
 import Dwq from './components/mow/Dwq'
 import Dwr from './components/mow/Dwr'
 import Maji from './components/mow/Maji'
+import Basin from './components/mow/Basin'
 import Region from "./components/regions/Region";
 import Projects from "./components/projects/Projects"
 import BasinProjects from "./components/basinprojects/BasinProjects"
@@ -21,10 +22,11 @@ function App() {
         <Route path="/" element={<Layout/>}>
          <Route index element={<Home />}/>
          <Route path="claims" element={<Claims/>}/>
-         <Route path="mow" element={<Mow/>}/>
          <Route path="dwss" element={<Dwss/>}/>
          <Route path="dwq" element={<Dwq/>}/>
          <Route path="dwr" element={<Dwr/>}/>
+         <Route path="basins" element={<Basin/>}/>
+         <Route path="labs" element={<Labs/>}/>
          <Route path="maji" element={<Maji/>}/>
          <Route path="ruwasa" element={<Ruwasa/>}/>
          <Route path="regions/:regionKey" element={<Region/>}/>

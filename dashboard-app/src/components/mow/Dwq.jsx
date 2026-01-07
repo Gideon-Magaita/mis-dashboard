@@ -83,7 +83,7 @@ function Dwq() {
           <h3 className="fw-bold">
             DWQ – Claimed amounts per Lab
           </h3>
-          <Link to="/mow" className="btn btn-sm btn-secondary btn-round mt-2">
+          <Link to="/" className="btn btn-sm btn-secondary btn-round mt-2">
             ← Go Back
         </Link>
         </div>
@@ -94,7 +94,7 @@ function Dwq() {
 
           {/* DWQ - MoW */}
           <div className="col-md-4 mb-3">
-            <Link to="/mow" className="text-decoration-none">
+            <Link to="/" className="text-decoration-none">
               <div className="card card-stats card-round">
                 <div className="card-body">
                   <div className="row align-items-center">

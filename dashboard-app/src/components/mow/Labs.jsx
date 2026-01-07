@@ -2,24 +2,22 @@ import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Chart from "chart.js/auto";
 
-function Dwr() {
+function Labs() {
   const chartRef = useRef(null);
   const chartInstance = useRef(null);
 
-  //DWR Basins Dataset
-  const basins = [
-    { key: "pangani", name: "Pangani Basin", amount: 1350000 },
-    { key: "wami-ruvu", name: "Wami Ruvu Basin", amount: 2200000 },
-    { key: "rufiji", name: "Rufiji Basin", amount: 3100000 },
-    { key: "ruvuma", name: "Ruvuma & Southern Coast Basin", amount: 1800000 },
-    { key: "lake-nyasa", name: "Lake Nyasa Basin", amount: 950000 },
-    { key: "internal-drainage", name: "Internal Drainage Basin", amount: 780000 },
-    { key: "lake-rukwa", name: "Lake Rukwa Basin", amount: 820000 },
-    { key: "lake-tanganyika", name: "Lake Tanganyika Basin", amount: 1600000 },
-    { key: "lake-victoria", name: "Lake Victoria Basin", amount: 2900000 },
+  //Labs Dataset
+  const labs = [
+    { key: "mwanza", name: "Mwanza Lab", amount: 1200000 },
+    { key: "shinyanga", name: "Shinyanga Lab", amount: 950000 },
+    { key: "bukoba", name: "Bukoba Lab", amount: 780000 },
+    { key: "musoma", name: "Musoma Lab", amount: 860000 },
+    { key: "kigoma", name: "Kigoma Lab", amount: 910000 },
+    { key: "dsm", name: "Dar es Salaam Lab", amount: 1000000 },
+    { key: "singida", name: "Singida Lab", amount: 670000 },
   ];
 
-  const mowAmount = 6000000;
+  const mowAmount = 5000000;
 
   //Chart
   useEffect(() => {
@@ -32,11 +30,11 @@ function Dwr() {
     chartInstance.current = new Chart(ctx, {
       type: "bar",
       data: {
-        labels: ["DWR - MoW", ...basins.map((b) => b.name)],
+        labels: ["DWQ - MoW", ...labs.map((lab) => lab.name)],
         datasets: [
           {
             label: "Amount (TZS)",
-            data: [mowAmount, ...basins.map((b) => b.amount)],
+            data: [mowAmount, ...labs.map((lab) => lab.amount)],
             backgroundColor: [
               "#177dff",
               "#10bb85",
@@ -46,8 +44,6 @@ function Dwr() {
               "#6f42c1",
               "#20c997",
               "#fd7e14",
-              "#0dcaf0",
-              "#198754",
             ],
             borderRadius: 8,
           },
@@ -85,51 +81,22 @@ function Dwr() {
         {/* Page Title */}
         <div className="mb-4 d-flex justify-content-between align-items-center">
           <h3 className="fw-bold">
-          DWR – Claimed amounts per Basin
+            Claimed amounts per Lab
           </h3>
-           <Link to="/" className="btn btn-sm btn-secondary btn-round">
+          <Link to="/claims" className="btn btn-sm btn-secondary btn-round mt-2">
             ← Go Back
-          </Link>
+        </Link>
         </div>
 
-    
 
-        {/* Cards */}
+        {/* Start Cards */}
         <div className="row">
 
-          {/* DWR - MoW */}
-          <div className="col-md-4 mb-3">
-            <Link to="/" className="text-decoration-none">
-              <div className="card card-stats card-round">
-                <div className="card-body">
-                  <div className="row align-items-center">
-
-                    <div className="col-icon">
-                      <div className="icon-big text-center icon-primary bubble-shadow-small">
-                        <i className="fas fa-building"></i>
-                      </div>
-                    </div>
-
-                    <div className="col col-stats ms-3">
-                      <div className="numbers">
-                        <p className="card-category">DWR - MoW</p>
-                        <h4 className="card-title">
-                          TZS {mowAmount.toLocaleString()}
-                        </h4>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </div>
-
-          {/* Basins */}
-          {basins.map((basin) => (
-            <div className="col-md-4 mb-3" key={basin.key}>
+          {/* Labs */}
+          {labs.map((lab) => (
+            <div className="col-md-4 mb-3" key={lab.key}>
               <Link
-                to={`/basinprojects/${basin.key}`}
+                to={`/labs/${lab.key}`}
                 className="text-decoration-none"
               >
                 <div className="card card-stats card-round">
@@ -138,15 +105,15 @@ function Dwr() {
 
                       <div className="col-icon">
                         <div className="icon-big text-center icon-info bubble-shadow-small">
-                          <i className="fas fa-water"></i>
+                          <i className="fas fa-flask"></i>
                         </div>
                       </div>
 
                       <div className="col col-stats ms-3">
                         <div className="numbers">
-                          <p className="card-category">{basin.name}</p>
+                          <p className="card-category">{lab.name}</p>
                           <h4 className="card-title">
-                            TZS {basin.amount.toLocaleString()}
+                            TZS {lab.amount.toLocaleString()}
                           </h4>
                         </div>
                       </div>
@@ -166,11 +133,11 @@ function Dwr() {
             <div className="card card-round">
               <div className="card-header">
                 <div className="card-title">
-                  Basin Amount Comparison
+                Laboratory Amount Comparison
                 </div>
               </div>
               <div className="card-body">
-                <div style={{ height: "450px" }}>
+                <div style={{ height: "420px" }}>
                   <canvas ref={chartRef}></canvas>
                 </div>
               </div>
@@ -183,4 +150,4 @@ function Dwr() {
   );
 }
 
-export default Dwr;
+export default Labs;

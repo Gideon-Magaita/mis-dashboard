@@ -60,7 +60,7 @@ function Dwss() {
 
           {/* Ministry of Water */}
           <div className="col-md-6">
-            <Link to="/mow" className="text-decoration-none">
+            <Link to="/" className="text-decoration-none">
               <div className="card card-stats card-round">
                 <div className="card-body">
                   <div className="row align-items-center">

@@ -89,7 +89,7 @@ function Maji() {
         {/* Page Title */}
         <div className="d-flex justify-content-between align-items-center mb-4">
         <h3 className="fw-bold">Claimed amounts per region</h3>
-        <Link to="/dwss" className="btn btn-sm btn-secondary btn-round mt-2">
+        <Link to="/claims" className="btn btn-sm btn-secondary btn-round mt-2">
             ← Go Back
         </Link>
         </div>
