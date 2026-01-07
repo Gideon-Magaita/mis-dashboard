@@ -9,9 +9,11 @@ function Home() {
   // Demo data
   const cardData = [
     { category: "Total Claims", amount: 1_294_000_000, icon: "fas fa-file-alt", color: "primary", link: "/claims" },
-    { category: "Total IPCS", amount: 1_303_000_000, icon: "fas fa-users", color: "info", link: "/ipcs" },
-    { category: "Projects", amount: 1_345_000_000, icon: "fas fa-project-diagram", color: "success", link: "/projects" },
-    { category: "Certificates", amount: 576_000_000, icon: "fas fa-user-tie", color: "danger", link: "/certificates" },
+    { category: "Planned Projects", amount: 1_303_000_000, icon: "fas fa-users", color: "info", link: "/planned" },
+    { category: "Ongoing Projects", amount: 1_345_000_000, icon: "fas fa-project-diagram", color: "success", link: "/ongoing" },
+    { category: "Completed Projects", amount: 576_000_000, icon: "fas fa-user-tie", color: "danger", link: "/completed" },
+    { category: "Paid Amount", amount: 520_000_000, icon: "fas fa-home", color: "warning", link: "/paid" },
+
   ];
 
   useEffect(() => {
@@ -33,6 +35,7 @@ function Home() {
                 case "info": return "#36a3f7";
                 case "success": return "#2bb930";
                 case "danger": return "#f3545d";
+                case "warning": return "#ecc30cff";
                 default: return "#177dff";
               }
             }),
