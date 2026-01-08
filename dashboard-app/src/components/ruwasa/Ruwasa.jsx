@@ -9,7 +9,7 @@ function Ruwasa() {
   // RUWASA Regions Dataset
   const regions = [
     { key: "arusha", name: "Arusha", amount: 1200000 },
-    { key: "dodoma", name: "Dodoma (Headquarters)", amount: 2500000 },
+    { key: "dodoma", name: "Dodoma", amount: 2500000 },
     { key: "geita", name: "Geita", amount: 980000 },
     { key: "iringa", name: "Iringa", amount: 1100000 },
     { key: "kagera", name: "Kagera", amount: 850000 },

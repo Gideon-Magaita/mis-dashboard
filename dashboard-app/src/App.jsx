@@ -15,6 +15,8 @@ import Ruwasa from './components/ruwasa/Ruwasa'
 import RegionDetails from './components/ruwasa/RegionDetails'
 import DistrictProjects from './components/ruwasaprojects/DistrictProjects'
 import Planned from './components/projects/Planned'
+import Ongoing from './components/projects/Ongoing'
+import Completed from './components/projects/Completed'
 
 function App() {
   return (
@@ -36,6 +38,8 @@ function App() {
          <Route path="ruwasa/:regionKey" element={<RegionDetails />} />
          <Route path="ruwasaprojects/:districtKey" element={<DistrictProjects />} />
          <Route path="planned" element={<Planned/>}/>
+         <Route path="ongoing" element={<Ongoing/>}/>
+         <Route path="completed" element={<Completed/>}/>
         </Route>
       </Routes>
     </Router>

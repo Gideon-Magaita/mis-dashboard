@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 import Chart from "chart.js/auto";
 import $ from "jquery";
 
-/* ===============================
-   DataTables + Export imports
-================================ */
+/* DataTables + Export imports*/
 import "datatables.net-bs5";
 import "datatables.net-buttons-bs5";
 import "datatables.net-buttons/js/buttons.html5";
@@ -19,46 +17,35 @@ import pdfFonts from "pdfmake/build/vfs_fonts";
 window.JSZip = JSZip;
 pdfMake.vfs = pdfFonts.vfs;
 
-/* ===============================
-   Sample Project Data
-================================ */
+/* Sample data assuming generated from APIs */
 const projects = [
-  { name: "Borehole Construction", year: "2023/2024", region: "Dodoma", cost: 120000000 },
-  { name: "Water Pipeline Extension", year: "2023/2024", region: "Singida", cost: 90000000 },
-  { name: "Dam Rehabilitation", year: "2024/2025", region: "Morogoro", cost: 150000000 },
-  { name: "Urban Water Supply", year: "2024/2025", region: "Arusha", cost: 110000000 },
-  { name: "Rural Water Supply", year: "2024/2025", region: "Dodoma", cost: 80000000 },
+  { name: "Borehole Construction", year: "2023/2024", region: "Dodoma", cost: 120000000,status:"Planned"},
+  { name: "Water Pipeline Extension", year: "2023/2024", region: "Singida", cost: 90000000,status:"Planned" },
+  { name: "Dam Rehabilitation", year: "2024/2025", region: "Morogoro", cost: 150000000,status:"Planned" },
+  { name: "Urban Water Supply", year: "2024/2025", region: "Arusha", cost: 110000000,status:"Planned" },
+  { name: "Rural Water Supply", year: "2024/2025", region: "Dodoma", cost: 80000000,status:"Planned" },
 ];
 
 function Planned() {
   const [selectedYear, setSelectedYear] = useState("");
   const chartRef = useRef(null);
   const chartInstance = useRef(null);
+  const tableRef = useRef(null);
 
-  /* ===============================
-     Filter projects by year
-  ================================ */
-  const filteredProjects = selectedYear
+/*Chart Data (filtered by year)*/
+  const chartProjects = selectedYear
     ? projects.filter(p => p.year === selectedYear)
     : projects;
 
-  /* ===============================
-     Group cost by region
-  ================================ */
-  const regionTotals = filteredProjects.reduce((acc, project) => {
+/*Group cost by region for bar chart*/
+  const regionTotals = chartProjects.reduce((acc, project) => {
     acc[project.region] = (acc[project.region] || 0) + project.cost;
     return acc;
   }, {});
 
-  /* ===============================
-     DataTable Init
-  ================================ */
+/*Initialize DataTable once*/
   useEffect(() => {
-    if ($.fn.dataTable.isDataTable("#projectsTable")) {
-      $("#projectsTable").DataTable().destroy();
-    }
-
-    $("#projectsTable").DataTable({
+    tableRef.current = $("#projectsTable").DataTable({
       responsive: true,
       dom: "Bfrtip",
       buttons: [
@@ -67,11 +54,23 @@ function Planned() {
         { extend: "print", title: "Planned Projects" }
       ]
     });
-  }, [filteredProjects]);
 
-  /* ===============================
-     Bar Chart (Cost per Region)
-  ================================ */
+    return () => {
+      tableRef.current.destroy();
+    };
+  }, []);
+
+/*Filter DataTable by Financial Year*/
+  useEffect(() => {
+    if (tableRef.current) {
+      tableRef.current
+        .column(1) // Financial Year column
+        .search(selectedYear)
+        .draw();
+    }
+  }, [selectedYear]);
+
+/*Bar Chart (Cost per Region)*/
   useEffect(() => {
     if (chartInstance.current) {
       chartInstance.current.destroy();
@@ -85,6 +84,9 @@ function Planned() {
           {
             label: "Total Cost (TZS)",
             data: Object.values(regionTotals),
+            backgroundColor: "rgba(54, 162, 235, 0.7)",
+            borderColor: "rgba(54, 162, 235, 1)",
+            borderWidth: 1
           }
         ]
       },
@@ -106,7 +108,7 @@ function Planned() {
         }
       }
     });
-  }, [filteredProjects]);
+  }, [chartProjects]);
 
   return (
     <div className="container-fluid">
@@ -144,15 +146,19 @@ function Planned() {
                   <th>Financial Year</th>
                   <th>Region</th>
                   <th>Cost (TZS)</th>
+                  <th>Status</th>
                 </tr>
               </thead>
               <tbody>
-                {filteredProjects.map((p, index) => (
+                {projects.map((p, index) => (
                   <tr key={index}>
                     <td>{p.name}</td>
                     <td>{p.year}</td>
                     <td>{p.region}</td>
                     <td>{p.cost.toLocaleString()}</td>
+                    <td>
+                        <span className="badge bg-info">{p.status}</span>
+                    </td>
                   </tr>
                 ))}
               </tbody>

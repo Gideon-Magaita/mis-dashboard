@@ -47,7 +47,7 @@ function Home() {
       amountOnly: true,
       icon: "fas fa-wallet",
       color: "warning",
-      link: "/paid",
+      link: "/",
     },
   ];
 
