@@ -4,8 +4,19 @@ import Chart from "chart.js/auto";
 
 function Completed() {
   const stats = [
-    { category: "Urban", totalProjects: 5, totalCost: 3000000, icon: "fas fa-city", color: "primary", link: "/projects/urban" },
-    { category: "Rural", totalProjects: 8, totalCost: 4500000, icon: "fas fa-tree", color: "success", link: "/projects/rural" },
+    { category: "Urban", 
+        totalProjects: 5, 
+        totalCost: 3000000, 
+        icon: "fas fa-city", 
+        color: "primary", 
+        link: "/projects/urban" },
+
+    { category: "Rural", 
+        totalProjects: 8, 
+        totalCost: 4500000, 
+        icon: "fas fa-tree", 
+        color: "success", 
+        link: "/projects/rural" },
   ];
 
   const costChartRef = useRef(null);
