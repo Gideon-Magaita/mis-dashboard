@@ -18,7 +18,7 @@ import Planned from './components/projects/Planned'
 import Ongoing from './components/projects/Ongoing'
 import Completed from './components/projects/Completed'
 import RegionProjects from './components/projects/RegionProjects'
-
+import RegionCompleted from './components/projects/RegionCompleted'
 
 function App() {
   return (
@@ -43,6 +43,7 @@ function App() {
          <Route path="ongoing" element={<Ongoing/>}/>
          <Route path="completed" element={<Completed/>}/>
          <Route path="/ongoingregions/:region" element={<RegionProjects/>}/>
+         <Route path='/completedprojects/:region' element={<RegionCompleted/>}/>
 
         </Route>
       </Routes>

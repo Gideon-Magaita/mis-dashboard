@@ -21,7 +21,7 @@ window.JSZip = jszip;
 pdfMake.vfs = pdfFonts.vfs;
 
 
-function RegionProjects() {
+function RegionCompleted() {
   const { region } = useParams(); // urban | rural
   const tableRef = useRef(null);
 
@@ -33,7 +33,7 @@ function RegionProjects() {
       type: "urban",
       regionName: "Dar es Salaam",
       financialYear: "2023/2024",
-      status: "Ongoing",
+      status: "Completed",
       cost: 1_200_000,
     },
     {
@@ -42,7 +42,7 @@ function RegionProjects() {
       type: "urban",
       regionName: "Dodoma",
       financialYear: "2024/2025",
-      status: "Ongoing",
+      status: "Completed",
       cost: 1_800_000,
     },
     {
@@ -52,7 +52,7 @@ function RegionProjects() {
       regionName: "Morogoro",
       districtName: "Kilosa",
       financialYear: "2023/2024",
-      status: "Ongoing",
+      status: "Completed",
       cost: 900_000,
     },
     {
@@ -62,13 +62,13 @@ function RegionProjects() {
       regionName: "Mwanza",
       districtName: "Ilemela",
       financialYear: "2024/2025",
-      status: "Ongoing",
+      status: "Completed",
       cost: 1_050_000,
     },
   ];
 
   const filteredProjects = projects.filter(
-    (p) => p.type === region && p.status === "Ongoing"
+    (p) => p.type === region && p.status === "Completed"
   );
 
   useEffect(() => {
@@ -89,17 +89,17 @@ function RegionProjects() {
         {
           extend: "excel",
           className: "btn btn-success btn-sm",
-          title: "Ongoing Projects",
+          title: "Completed Projects",
         },
         {
           extend: "pdf",
           className: "btn btn-danger btn-sm",
-          title: "Ongoing Projects",
+          title: "Completed Projects",
         },
         {
           extend: "print",
           className: "btn btn-secondary btn-sm",
-          title: "Ongoing Projects",
+          title: "Completed Projects",
         },
       ],
 
@@ -172,10 +172,10 @@ function RegionProjects() {
         {/* Header */}
         <div className="d-flex justify-content-between align-items-center mb-4">
           <h3 className="fw-bold text-capitalize">
-            {region === "urban" ? "Urban Projects" : "Rural Projects"} – Ongoing
+            {region === "urban" ? "Urban Projects" : "Rural Projects"} – Completed
           </h3>
-          <Link to="/ongoing" className="btn btn-sm btn-secondary btn-round">
-            ← Back to Regions
+          <Link to="/completed" className="btn btn-sm btn-secondary btn-round">
+            ← Go Back
           </Link>
         </div>
 
@@ -211,7 +211,7 @@ function RegionProjects() {
                       {p.cost.toLocaleString()}
                     </td>
                     <td>
-                      <span className="badge bg-info">{p.status}</span>
+                      <span className="badge bg-success">{p.status}</span>
                     </td>
                   </tr>
                 ))}
@@ -225,4 +225,4 @@ function RegionProjects() {
   );
 }
 
-export default RegionProjects;
+export default RegionCompleted;

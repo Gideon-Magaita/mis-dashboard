@@ -9,14 +9,14 @@ function Completed() {
         totalCost: 3000000, 
         icon: "fas fa-city", 
         color: "primary", 
-        link: "/projects/urban" },
+        link: "urban" },
 
     { category: "Rural", 
         totalProjects: 8, 
         totalCost: 4500000, 
         icon: "fas fa-tree", 
         color: "success", 
-        link: "/projects/rural" },
+        link: "rural" },
   ];
 
   const costChartRef = useRef(null);
@@ -124,6 +124,16 @@ function Completed() {
                             <h4 className="mb-0">TZS {stat.totalCost.toLocaleString()}</h4>
                           </div>
                         </div>
+                        
+                                              {/* View Button */}
+                                              <div className="text-center mt-3">
+                                                <Link
+                                                  to={`/completedprojects/${stat.link}`}
+                                                  className={`btn btn-sm btn-${stat.color}`}
+                                                >
+                                                  View Projects
+                                                </Link>
+                                              </div>
                       </div>
                     </div>
                   </div>
