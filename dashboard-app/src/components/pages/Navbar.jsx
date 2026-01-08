@@ -62,14 +62,13 @@ export default function Navbar() {
               >
                 <div className="avatar-sm">
                   <img
-                    src="/assets/img/logo.png"
+                    src="/assets/img/user.png"
                     alt="..."
                     className="avatar-img rounded-circle"
                   />
                 </div>
                 <span className="profile-username">
-                  <span className="op-7">Hi,</span>
-                  <span className="fw-bold">User</span>
+                  <span className="op-7">User</span>
                 </span>
               </a>
 

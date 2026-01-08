@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Chart from "chart.js/auto";
 
+
+
 function Ongoing() {
   // Sample data
   const stats = [
@@ -15,7 +17,7 @@ function Ongoing() {
   const projectsChartInstance = useRef(null);
 
   // Initialize Cost Pie Chart
-  useEffect(() => {
+useEffect(() => {
     if (costChartInstance.current) costChartInstance.current.destroy();
 
     costChartInstance.current = new Chart(costChartRef.current, {
