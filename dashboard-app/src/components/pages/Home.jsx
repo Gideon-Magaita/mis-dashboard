@@ -109,7 +109,7 @@ function Home() {
         {/* Header */}
         <div className="d-flex justify-content-between align-items-center pt-2 pb-4">
           <h3 className="fw-bold mb-0">Certificates Dashboard</h3>
-          <Link to="/projects" className="btn btn-primary btn-round">
+          <Link to="/planned" className="btn btn-primary btn-round">
             View Projects
           </Link>
         </div>
@@ -127,7 +127,7 @@ function Home() {
                   className={`d-flex justify-content-between align-items-center px-3 py-2 rounded-top bg-${d.color} bg-opacity-10`}
                   style={{ borderBottom: `2px solid #${d.color === 'primary' ? '177dff' : d.color === 'info' ? '36a3f7' : d.color === 'success' ? '2bb930' : d.color === 'danger' ? 'f3545d' : 'f7c32e'}` }}
                 >
-                  <h3 className="fw-bold text-dark mb-0">{d.category}</h3>
+                  <h6 className="fw-bold text-dark mb-0" style={{textTransform:'uppercase'}}>{d.category}</h6>
                   <div
                     className={`d-flex align-items-center justify-content-center icon icon-${d.color} bg-opacity-25`}
                     style={{ width: "50px", height: "50px" }}
