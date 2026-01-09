@@ -21,7 +21,7 @@ window.JSZip = jszip;
 pdfMake.vfs = pdfFonts.vfs;
 
 
-function RegionProjects() {
+function RegionOgoing() {
   const { region } = useParams(); // urban | rural
   const tableRef = useRef(null);
 
@@ -225,4 +225,4 @@ function RegionProjects() {
   );
 }
 
-export default RegionProjects;
+export default RegionOgoing;

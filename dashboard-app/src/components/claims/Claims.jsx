@@ -6,6 +6,7 @@ function Mow() {
   const chartRef = useRef(null);
   const chartInstance = useRef(null);
 
+  const mow = 1_200_000
   const darhm = 1_300_000
   const dwss = 1_200_000
   const dwr = 1_100_000
@@ -22,6 +23,7 @@ function Mow() {
       type: "bar",
       data: {
         labels: [
+          "MoW",
           "DARHM",
           "DWSS",
           "DWQ",
@@ -30,8 +32,9 @@ function Mow() {
         datasets: [
           {
             label: "Amount (TZS)",
-            data: [1_300_000,1_200_000,1_100_000,1_000_000],
+            data: [1_200_000,1_300_000,1_200_000,1_100_000,1_000_000],
             backgroundColor: [
+              "#5198faff",
               "#39495fff",
               "#4eaef8ff",
               "#39835dff",
@@ -69,7 +72,11 @@ function Mow() {
   return (
     <div className="container-fluid">
       <div className="page-inner">
-
+        <div className="mb-4 d-flex justify-content-end align-items-center">
+          <Link to="/" className="btn btn-sm btn-secondary btn-round mt-2">
+            ← Go Back
+          </Link>
+        </div>
         {/* Cards */}
         <div className="row">
 
@@ -87,7 +94,7 @@ function Mow() {
                     <div className="col col-stats ms-3">
                       <div className="numbers">
                         <p className="card-category">MoW-HQ</p>
-                        <h4 className="card-title">{darhm.toLocaleString()}M</h4>
+                        <h4 className="card-title">{mow.toLocaleString()}M</h4>
                       </div>
                     </div>
                   </div>

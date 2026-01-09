@@ -108,7 +108,7 @@ function Home() {
 
         {/* Header */}
         <div className="d-flex justify-content-between align-items-center pt-2 pb-4">
-          <h3 className="fw-bold mb-0">Certificates Dashboard</h3>
+          <h3 className="fw-bold mb-0">Dashboard</h3>
           <Link to="/planned" className="btn btn-primary btn-round">
             View Projects
           </Link>

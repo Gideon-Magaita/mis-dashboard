@@ -17,7 +17,7 @@ import DistrictProjects from './components/ruwasaprojects/DistrictProjects'
 import Planned from './components/projects/Planned'
 import Ongoing from './components/projects/Ongoing'
 import Completed from './components/projects/Completed'
-import RegionProjects from './components/projects/RegionProjects'
+import RegionOgoing from './components/projects/RegionOgoing'
 import RegionCompleted from './components/projects/RegionCompleted'
 
 function App() {
@@ -42,7 +42,7 @@ function App() {
          <Route path="planned" element={<Planned/>}/>
          <Route path="ongoing" element={<Ongoing/>}/>
          <Route path="completed" element={<Completed/>}/>
-         <Route path="/ongoingregions/:region" element={<RegionProjects/>}/>
+         <Route path="/ongoingregions/:region" element={<RegionOgoing/>}/>
          <Route path='/completedprojects/:region' element={<RegionCompleted/>}/>
 
         </Route>
