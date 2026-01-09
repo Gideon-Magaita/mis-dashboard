@@ -37,7 +37,7 @@ export default function Sidebar() {
               <Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}>
               
                 <i className="fas fa-home"></i>
-                <p>Dashboard</p>
+                <p>Home</p>
           
                 <span className="caret"></span>
               </Link>
