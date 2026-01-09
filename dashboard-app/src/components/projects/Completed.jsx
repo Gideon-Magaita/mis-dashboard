@@ -101,7 +101,7 @@ function Completed() {
         <div className="row g-3">
           {stats.map((stat, index) => (
             <div key={index} className="col-md-6">
-              <Link to={stat.link} className="text-decoration-none">
+              <Link to={`/completedprojects/${stat.link}`} className="text-decoration-none">
                 <div className={`card card-stats card-round h-100 border-${stat.color} shadow-sm hover-shadow`}>
                   <div className={`card-header bg-${stat.color} text-white py-2 text-center fw-bold`}>
                     {stat.category}
@@ -125,15 +125,14 @@ function Completed() {
                           </div>
                         </div>
                         
-                                              {/* View Button */}
-                                              <div className="text-center mt-3">
-                                                <Link
-                                                  to={`/completedprojects/${stat.link}`}
-                                                  className={`btn btn-sm btn-${stat.color}`}
-                                                >
-                                                  View Projects
-                                                </Link>
-                                              </div>
+                        <div className="text-center mt-3">
+                          <Link
+                            to={`/completedprojects/${stat.link}`}
+                            className={`btn btn-sm btn-${stat.color}`}
+                          >
+                            View Projects
+                          </Link>
+                        </div>
                       </div>
                     </div>
                   </div>
