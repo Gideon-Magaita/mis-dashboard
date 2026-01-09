@@ -175,7 +175,7 @@ function RegionOgoing() {
             {region === "urban" ? "Urban Projects" : "Rural Projects"} – Ongoing
           </h3>
           <Link to="/ongoing" className="btn btn-sm btn-secondary btn-round">
-            ← Back to Regions
+            ← Go Back
           </Link>
         </div>
 

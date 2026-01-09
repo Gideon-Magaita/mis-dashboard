@@ -98,7 +98,7 @@ function Ongoing() {
 
         {/* Page Header */}
         <div className="d-flex justify-content-between align-items-center mb-4">
-          <h3 className="fw-bold">Ongoing Projects by Region</h3>
+          <h3 className="fw-bold">Ongoing Projects</h3>
           <Link to="/" className="btn btn-sm btn-secondary btn-round">
             ← Go Back
           </Link>
@@ -111,7 +111,7 @@ function Ongoing() {
               <div className={`card card-stats card-round h-100 border-${stat.color} shadow-sm`}>
                 
                 <div className={`card-header bg-${stat.color} text-white text-center fw-bold`}>
-                  {stat.category} Region
+                  {stat.category}
                 </div>
 
                 <div className="card-body">

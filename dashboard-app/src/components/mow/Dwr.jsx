@@ -87,16 +87,12 @@ function Dwr() {
           <h3 className="fw-bold">
           DWR – Claimed amounts per Basin
           </h3>
-           <Link to="/" className="btn btn-sm btn-secondary btn-round">
+           <Link to="/claims" className="btn btn-sm btn-secondary btn-round">
             ← Go Back
           </Link>
         </div>
-
-    
-
         {/* Cards */}
         <div className="row">
-
           {/* DWR - MoW */}
           <div className="col-md-4 mb-3">
             <Link to="/" className="text-decoration-none">
