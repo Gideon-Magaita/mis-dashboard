@@ -1,6 +1,5 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import Chart from "chart.js/auto";
 
 function Ongoing() {
   // Regions summary data
@@ -23,75 +22,6 @@ function Ongoing() {
     },
   ];
 
-  const costChartRef = useRef(null);
-  const projectsChartRef = useRef(null);
-  const costChartInstance = useRef(null);
-  const projectsChartInstance = useRef(null);
-
-  /* ================= COST PIE CHART ================= */
-  useEffect(() => {
-    if (costChartInstance.current) {
-      costChartInstance.current.destroy();
-    }
-
-    costChartInstance.current = new Chart(costChartRef.current, {
-      type: "pie",
-      data: {
-        labels: stats.map((s) => s.category),
-        datasets: [
-          {
-            data: stats.map((s) => s.totalCost),
-            backgroundColor: [
-              "rgba(54, 162, 235, 0.7)",
-              "rgba(75, 192, 192, 0.7)",
-            ],
-          },
-        ],
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: { position: "bottom" },
-          title: { display: true, text: "Project Cost Comparison (TZS)" },
-        },
-      },
-    });
-
-    return () => costChartInstance.current?.destroy();
-  }, []);
-
-  /* ================= PROJECTS PIE CHART ================= */
-  useEffect(() => {
-    if (projectsChartInstance.current) {
-      projectsChartInstance.current.destroy();
-    }
-
-    projectsChartInstance.current = new Chart(projectsChartRef.current, {
-      type: "pie",
-      data: {
-        labels: stats.map((s) => s.category),
-        datasets: [
-          {
-            data: stats.map((s) => s.totalProjects),
-            backgroundColor: [
-              "rgba(54, 162, 235, 0.7)",
-              "rgba(75, 192, 192, 0.7)",
-            ],
-          },
-        ],
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: { position: "bottom" },
-          title: { display: true, text: "Total Projects Comparison" },
-        },
-      },
-    });
-
-    return () => projectsChartInstance.current?.destroy();
-  }, []);
-
   return (
     <div className="container-fluid">
       <div className="page-inner">
@@ -108,17 +38,21 @@ function Ongoing() {
         <div className="row g-3">
           {stats.map((stat, index) => (
             <div key={index} className="col-md-6">
-              <div className={`card card-stats card-round h-100 border-${stat.color} shadow-sm`}>
-                
-                <div className={`card-header bg-${stat.color} text-white text-center fw-bold`}>
+              <div
+                className={`card card-stats card-round h-100 border-${stat.color} shadow-sm`}
+              >
+                <div
+                  className={`card-header bg-${stat.color} text-white text-center fw-bold`}
+                >
                   {stat.category}
                 </div>
 
                 <div className="card-body">
                   <div className="d-flex align-items-center">
-
                     <div className="me-3">
-                      <i className={`${stat.icon} fa-3x text-${stat.color}`}></i>
+                      <i
+                        className={`${stat.icon} fa-3x text-${stat.color}`}
+                      ></i>
                     </div>
 
                     <div className="flex-grow-1">
@@ -129,7 +63,9 @@ function Ongoing() {
                         </div>
                         <div>
                           <p className="text-muted mb-1">Total Cost</p>
-                          <h4>TZS {stat.totalCost.toLocaleString()}</h4>
+                          <h4>
+                            TZS {stat.totalCost.toLocaleString()}
+                          </h4>
                         </div>
                       </div>
 
@@ -142,7 +78,6 @@ function Ongoing() {
                           View Projects
                         </Link>
                       </div>
-
                     </div>
                   </div>
                 </div>
@@ -150,31 +85,6 @@ function Ongoing() {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Charts */}
-        <div className="row mt-4">
-          <div className="col-md-6">
-            <div className="card card-round">
-              <div className="card-header fw-bold text-center">
-                Project Cost Comparison
-              </div>
-              <div className="card-body">
-                <canvas ref={costChartRef}></canvas>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-md-6">
-            <div className="card card-round">
-              <div className="card-header fw-bold text-center">
-                Total Projects Comparison
-              </div>
-              <div className="card-body">
-                <canvas ref={projectsChartRef}></canvas>
-              </div>
-            </div>
-          </div>
         </div>
 
       </div>
