@@ -6,7 +6,6 @@ function Mow() {
   const chartRef = useRef(null);
   const chartInstance = useRef(null);
 
-  const mow = 1_200_000
   const darhm = 1_300_000
   const dwss = 1_200_000
   const dwr = 1_100_000
@@ -23,7 +22,6 @@ function Mow() {
       type: "bar",
       data: {
         labels: [
-          "MoW",
           "DARHM",
           "DWSS",
           "DWQ",
@@ -32,9 +30,8 @@ function Mow() {
         datasets: [
           {
             label: "Amount (TZS)",
-            data: [1_200_000,1_300_000,1_200_000,1_100_000,1_000_000],
+            data: [1_300_000,1_200_000,1_100_000,1_000_000],
             backgroundColor: [
-              "#5198faff",
               "#39495fff",
               "#4eaef8ff",
               "#39835dff",
@@ -73,16 +70,16 @@ function Mow() {
     <div className="container-fluid">
       <div className="page-inner">
         <div className="mb-4 d-flex justify-content-end align-items-center">
-          <Link to="/" className="btn btn-sm btn-secondary btn-round mt-2">
+          <Link to="/claims" className="btn btn-sm btn-secondary btn-round mt-2">
             ← Go Back
           </Link>
         </div>
         {/* Cards */}
         <div className="row">
 
-           {/* MoW */}
+          {/* Total Claims */}
           <div className="col-sm-6 col-md-3">
-            <Link to="/mow" className="text-decoration-none">
+            <Link to="#" className="text-decoration-none">
               <div className="card card-stats card-round">
                 <div className="card-body">
                   <div className="row align-items-center">
@@ -93,8 +90,8 @@ function Mow() {
                     </div>
                     <div className="col col-stats ms-3">
                       <div className="numbers">
-                        <p className="card-category">MoW-HQ</p>
-                        <h4 className="card-title">{mow.toLocaleString()}M</h4>
+                        <p className="card-category">DARHM</p>
+                        <h4 className="card-title">{darhm.toLocaleString()}M</h4>
                       </div>
                     </div>
                   </div>
@@ -103,21 +100,21 @@ function Mow() {
             </Link>
           </div>
 
-          {/* WSSAs */}
+          {/* Total IPCS */}
           <div className="col-sm-6 col-md-3">
-            <Link to="/maji" className="text-decoration-none">
+            <Link to="/dwss" className="text-decoration-none">
             <div className="card card-stats card-round">
               <div className="card-body">
                 <div className="row align-items-center">
                   <div className="col-icon">
-                    <div className="icon-big text-center icon-secondary bubble-shadow-small">
-                      <i className="fas fa-user-tie"></i>
+                    <div className="icon-big text-center icon-info bubble-shadow-small">
+                      <i className="fas fa-users"></i>
                     </div>
                   </div>
                   <div className="col col-stats ms-3">
                     <div className="numbers">
-                      <p className="card-category">WSSAs</p>
-                      <h4 className="card-title">{dwr.toLocaleString()}M</h4>
+                      <p className="card-category">DWSS</p>
+                      <h4 className="card-title">{dwss.toLocaleString()}M</h4>
                     </div>
                   </div>
                 </div>
@@ -126,21 +123,21 @@ function Mow() {
             </Link>
           </div>
 
-          {/* RUWASA */}
+          {/* Projects */}
           <div className="col-sm-6 col-md-3">
-            <Link to="/ruwasa" className="text-decoration-none">
+            <Link to="/dwq" className="text-decoration-none">
             <div className="card card-stats card-round">
               <div className="card-body">
                 <div className="row align-items-center">
                   <div className="col-icon">
-                    <div className="icon-big text-center icon-secondary bubble-shadow-small">
-                      <i className="fas fa-user-tie"></i>
+                    <div className="icon-big text-center icon-success bubble-shadow-small">
+                      <i className="fas fa-project-diagram"></i>
                     </div>
                   </div>
                   <div className="col col-stats ms-3">
                     <div className="numbers">
-                      <p className="card-category">RUWASA</p>
-                      <h4 className="card-title">{dwr.toLocaleString()}M</h4>
+                      <p className="card-category">DWQ</p>
+                      <h4 className="card-title">{dwq.toLocaleString()}M</h4>
                     </div>
                   </div>
                 </div>
@@ -149,9 +146,9 @@ function Mow() {
             </Link>
           </div>
 
-          {/* BASINS */}
+          {/* dwr */}
           <div className="col-sm-6 col-md-3">
-            <Link to="/basins" className="text-decoration-none">
+            <Link to="/dwr" className="text-decoration-none">
             <div className="card card-stats card-round">
               <div className="card-body">
                 <div className="row align-items-center">
@@ -162,53 +159,7 @@ function Mow() {
                   </div>
                   <div className="col col-stats ms-3">
                     <div className="numbers">
-                      <p className="card-category">BWB</p>
-                      <h4 className="card-title">{dwr.toLocaleString()}M</h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            </Link>
-          </div>
-
-          {/* LABS */}
-          <div className="col-sm-6 col-md-3">
-            <Link to="/labs" className="text-decoration-none">
-            <div className="card card-stats card-round">
-              <div className="card-body">
-                <div className="row align-items-center">
-                  <div className="col-icon">
-                    <div className="icon-big text-center icon-secondary bubble-shadow-small">
-                      <i className="fas fa-user-tie"></i>
-                    </div>
-                  </div>
-                  <div className="col col-stats ms-3">
-                    <div className="numbers">
-                      <p className="card-category">Water Labs</p>
-                      <h4 className="card-title">{dwr.toLocaleString()}M</h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            </Link>
-          </div>
-
-          {/* wi */}
-          <div className="col-sm-6 col-md-3">
-            <Link to="/" className="text-decoration-none">
-            <div className="card card-stats card-round">
-              <div className="card-body">
-                <div className="row align-items-center">
-                  <div className="col-icon">
-                    <div className="icon-big text-center icon-secondary bubble-shadow-small">
-                      <i className="fas fa-user-tie"></i>
-                    </div>
-                  </div>
-                  <div className="col col-stats ms-3">
-                    <div className="numbers">
-                      <p className="card-category">Water Institute</p>
+                      <p className="card-category">DWR</p>
                       <h4 className="card-title">{dwr.toLocaleString()}M</h4>
                     </div>
                   </div>

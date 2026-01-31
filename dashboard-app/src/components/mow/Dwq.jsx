@@ -83,7 +83,7 @@ function Dwq() {
           <h3 className="fw-bold">
             DWQ – Claimed amounts per Lab
           </h3>
-          <Link to="/" className="btn btn-sm btn-secondary btn-round mt-2">
+          <Link to="/claims" className="btn btn-sm btn-secondary btn-round mt-2">
             ← Go Back
         </Link>
         </div>

@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Home from "./components/pages/Home"
 import Layout from "./components/pages/Layout"
 import Claims from "./components/claims/Claims"
+import MoW from "./components/claims/MoW"
 import Labs from './components/mow/Labs'
 import Dwss from './components/mow/Dwss'
 import Dwq from './components/mow/Dwq'
@@ -27,6 +28,7 @@ function App() {
         <Route path="/" element={<Layout/>}>
          <Route index element={<Home />}/>
          <Route path="claims" element={<Claims/>}/>
+         <Route path="mow" element={<MoW/>}/>
          <Route path="dwss" element={<Dwss/>}/>
          <Route path="dwq" element={<Dwq/>}/>
          <Route path="dwr" element={<Dwr/>}/>

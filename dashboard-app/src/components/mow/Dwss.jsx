@@ -16,7 +16,7 @@ function Dwss() {
     chartInstance.current = new Chart(ctx, {
       type: "bar",
       data: {
-        labels: ["DWSS - MoW", "MAJI MJINI"],
+        labels: ["DWSS - MoW", "WSSAs"],
         datasets: [
           {
             label: "Amount (TZS)",
@@ -84,7 +84,7 @@ function Dwss() {
             </Link>
           </div>
 
-          {/* RUWASA */}
+          {/* WSSA */}
           <div className="col-md-6">
             <Link to="/maji" className="text-decoration-none">
               <div className="card card-stats card-round">
